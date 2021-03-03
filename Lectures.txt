@@ -1,0 +1,1177 @@
+Week-1, Lecture-2
+
+
+
+Week-2, Lecture- 3
+
+What is computer programming?
+
+Computer Programming is a method of designing and constructing an executable computer program which helps to perform a particular computing result or a distinct task. For example, Microsft Word, Excel etc. are some computer programs where MS Word is used for documentation or article writing and MS Excel is used for numerous calculation, graphing tools, pivot tables functionalities. Calculator is also a computer program which performs calculations. 
+To write a computer program, several programming languages are used. Some programming languages are C, C++, Go, Python etc.
+
+To write a computer program with Golang, we need to Go compiler
+
+Installing Go program:
+
+To install Go, first go to this URL:
+https://golang.org/doc/install?download=go1.15.6.windows-amd64.msi
+
+Then download Go for Windows, Mac or Linux which depends on your computer operating system
+
+After download completion, install the program which named "go1.15.6.windows-amd64"
+
+After installation, go to the command prompt window of computer and then type the following line
+
+go version
+
+Then click enter, the command prompt will show this line
+go version go1.15.6 windows/amd64
+
+
+Week-2, Lecture-4
+
+Windows basic command line tool is named "Command Prompt".
+We can do all the basic things with command line tool.
+We can start any program from command prompt tool. For example: if we type "calc", then it will open Calculator application on windows. If we type "notepad" then it'll open notepad.
+
+Windows basic commands-
+
+Here, some more commands are described:
+
+cls - clearn screen
+cd - change directory
+changing to E drive - E:
+dir - shows files or folders under that drive directory
+mkdir - to creat a new folder (Eg: mkdir Hello means to create a folder named Hello)
+echo - to write something on a file
+echo hello world > Hello/student.txt (to write "hello world" on file student.txt under Hello folder)
+cd .. - previous directory
+rmdir - for delete directory
+
+Environment: the overall structure within which a user, computer, or program operates
+
+Environment variable- An environment variable is a dynamic-named value that can affect the way running processes will behave on a computer. They are part of the environment in which a process runs.
+
+If we want to know about environment variable of computer, "set" command is used
+
+Also it will give numerous information like computer name, processor, memory, homepath etc. We can also find these information by typing "dxdiag" from windows or running directx diagnostic tool
+If we type " echo %USERNAME% " then we will see computer username. We can also see environment variables from "edit environment variable" in a graphical way.
+
+GoLang environment:
+
+In a command prompt window, type
+
+go version
+Then click enter, the command prompt will show this line
+go version go1.15.6 windows/amd64
+To know more about go variables, type- go env
+
+One of the go variable is GoPATH which is by default set in C drive. But we can change it to any drive on our computer. Some folders of this go path are bin, pkg, src. Bin folder is for binary or executable files, pkg is for packages (third-party libraries) and src is for source code. To change go path, type
+SETX GOPATH "directory path"
+Go Workspace - the region where we store source code of GoLang.
+
+
+Week-3, Lecture-5
+
+
+Computer Program:
+
+Computer programming is a sequence of instruction to build and design an executable computer program.
+
+Work - Function
+List of work - list of function
+sequence of work
+
+To write a computer program, we need a computer where keyboard is a input device and screen/ monitor is a output device to show the program.
+
+What is file?
+
+A collection of data or programs that stores in a computer's memory or on a storage device under a single identifying name. Every file has a single identifyer which is it's name and some data.
+
+What is folder?
+A container or directory used to store and organize files or documents.
+
+What is extension?
+An optional suffix to a filename, typically consisting of full stop followed by several characters, indicating the file's content or function. For eample: .exe, .pdf, .go etc.
+
+Syntax:
+A specific format in which we give instruction to a computer program.
+
+Package:
+A collection of programs or subroutines with related functionality. A package can have many files but only one file with main function, since that file will be the entry point of the executiion. 
+Package is group of numerous works. Here, works are files. To make a software, we need to divide the functionalities in different packages. For example: 
+FORM Package -> form handling module/ package
+EMAIL Package -> Sending email related package 
+DATABASE Package -> Data insert, update or remove related package
+
+Go programming language has similar concept of package. The purpose of golang packages are:
+Making reusable code
+Organizing the source code/ files into a single unit
+making modular, reusable and maintanable.
+
+Advantage of packaging: to identify bugs easyli
+
+Go Programming:
+
+A sample go program-
+
+# Package declaration
+
+package main
+
+# Package importing # import "package name"
+
+import "fmt"
+
+# function declare # func functionName() {...}
+
+func main() {
+	fmt.Println("Hello World!")
+}
+
+The package "main" tells the Go compiler that the package should compile as an executable program instead of a shared library. The main function in the package main is the entry point of the executable program. 
+
+To run the program, type go run main.go in command prompt window.
+
+
+Week-3, Lecture-6
+
+GitHub: GitHub is a internet hosting provider for software development and version control using Git. It offers the distributed version control and source code management functionality of Git with some other functionalities.
+Link: https://github.com/
+
+Git: Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+Link: https://git-scm.com/downloads
+
+Version control: In software engineering, version control is a class of systems responsible for managing changes to computer programs, documents, large web sites, or other collections of information. Version control is a component of software configuration management.
+
+GitHub concepts- 
+GitHub repository: A repository contains all of your project's files and each file's revision history. You can discuss and manage your project's work within the repository. You can own repositories individually, or you can share ownership of repositories with other people in an organization. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+
+Git Commit: A commit or revision, is an individual change to a file (or set of files). Git commit creates a commit, which is like a snapshot of your repository. These commits are snapshots of your entire repository at specific times.
+
+Git Installation and commands: 
+After installation, type this command on Git bash or command window
+User@root MINGW64 ~
+$ git version
+git version 2.30.0.windows.2
+
+Setup:
+Configuring user information used across all local repositories
+
+git config --global user.name "firstname lastname"
+set a name that is identifiable for credit when review version history
+
+git config --global user.email "valid-email"
+set an email address that will be associated with each history marker
+
+git config --global color.ui auto
+set automatic command line coloring for Git for easy reviewing
+
+To watch the user's information:
+git config --list
+git config --global user.name "Name"
+git config --global user.email "email"
+
+Setup and init
+Configuring user information, initializing and cloning repositories
+
+git init
+initialize an existing directory as a Git repository
+
+git clone [url]
+retrieve an entire repository from a hosted location via URL
+
+
+Hello ladies and gentlemen!
+Hope you are in good health.
+It's a great pleasure for me to introduce myself. My name is Tanjin Adnan Abir and you may call me "Abir". I am a tech enthusiast and passionate about learning new things. I have completed my graduation from American International University Bangladesh in the department of Computer Science and Engineering and I have served here as a Teaching Assistant after my graduation. I was born into a Muslim family in Mymensingh. I love teaching, learning, travelling various places, gaming, writing articles etc.
+Since my childhood, I love science and technology, and that's why I have chosen Computer Science and Mathematics as my subject of study. From my own interest, I have chosen to learn Go Programming, and thanks to Master-Academy and Bill Rassel to give the opportunity to us. They also gave us a platform to practice English by opening the "English Club" and I always wish it success. 
+Thanks, everyone. Hope to see you soon. Stay safe 🙂 😊
+
+Week-4, Lecture-7
+
+GitHub repository: A repository contains all of your project's files and each file's revision history. You can discuss and manage your project's work within the repository. You can own repositories individually, or you can share ownership of repositories with other people in an organization. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+
+Difference between repository and directory:
+Directory is file system folder where where we puts our documents, images, videos etc. This term is associated with OS and daily usage. Repository is version control system where developers and software engineers stores their source code and other development items. In a repository, changed history or revision history can be existed.
+
+STAGE
+A staging step in git allows you to continue making changes to the working directory, and when you decide you want to interact with version control, it allows you to record changes in small commits. Staging is a step before the commit process in git. 
+
+git status- shows modified files in working directory, staged for your next commit
+
+git add [file]- add a file as it looks now to your next commit (stage)
+
+git branch- Git branches are effectively a pointer to a snapshot of your changes. When you want to add a new feature or fix a bug—no matter how big or how small—you spawn a new branch to encapsulate your changes. This makes it harder for unstable code to get merged into the main code base, and it gives you the chance to clean up your future's history before merging it into the main branch.
+
+git commit -m "[a descriptive message]"- commit your staged content as a new commit snapshot
+
+git push [alias] [branch]- Transmit local branch commits to the remote repository branch
+
+git diff- diff of what is changed but not staged
+
+Workflow for local git:
+First go to the directory, type git status
+git will show to trackable file because no file was added in git
+then add a file by typing git add <filename>
+git commit -m "message"
+
+For remote access to git workflow:
+git remote add origin "repository link"
+git branch -M main
+git push -u origin main
+the file will be uploaded to the remote repository 
+git diff
+chaged file will be loaded.
+
+Week-4, Lecture-8
+
+Data: Data are which we type from keyboard. Data are characteristics or information, usually numerical, that are collected through observation. In a more technical sense, data are a set of values of qualitative or quantitative variables about one or more persons or objects, while a datum is a single value of a single variable.
+
+Data types: In computer science and computer programming, a data type or simply type is an attribute of data which tells the compiler or interpreter how the programmer intends to use the data. Most programming languages support basic data types of integer numbers, floating-point numbers, characters and Booleans.
+
+Statement: A statement is a command that the programmer gives to the computer.
+
+Computer programming is a design process by which we make a computer program. It's also a set of instructions.
+
+Variable: In computer programming, a variable is a storage location paired with an associated symbolic name, which contains some known or unknown quantity of information referred to as a value.
+
+Syntax: Syntax is a set of rules.
+
+Variable and type declaration of a go program: var variableName type
+for example: var name string (a variable named name with type string)
+
+Initialization or assignment: var name string
+				name = "Tanjin" (putting data into name variable)
+
+Declaration and initialization together: var name string = "Coding Bootcamp"
+										 var name, email string = "Tanjin", "tanjin@mail.com"
+
+A go program:
+
+# Package declaration
+
+package main
+
+# Package importing # import "package name"
+
+import "fmt"
+
+# function declare # func functionName() {...}
+
+func main() {
+	var name string = "Coding Bootcamp"
+	var name, email string = "Tanjin", "tanjin@mail.com"
+
+	fmt.Println(name, email)
+}
+
+Run this program using go run variable.go
+
+We will see an error: 
+# command-line-arguments
+.\variable.go:7:6: name redeclared in this block
+        previous declaration at .\variable.go:6:6
+
+There are some errors for repiting variable name named "name"
+So the right program shoiuld be like below:
+
+package main
+
+import "fmt"
+
+func main() {
+	var name string = "Coding Bootcamp"
+	var my_name, email string = "Tanjin", "tanjin@mail.com"
+
+	fmt.Println(name, email, my_name)
+}
+
+Commenting: single and multi-line comments
+
+package main
+
+import "fmt"
+
+func main() {
+	// single line comment- variable declaration
+	var name string = "Coding Bootcamp"
+	var my_name, email string = "Tanjin", "tanjin@mail.com"
+	
+	/*
+	Multi-line comments
+	*/
+
+	fmt.Println(name, email, my_name)
+}
+
+Now we will declare variables with char, float and int types: 
+
+package main
+
+import "fmt"
+
+func main() {
+	// single line comment- variable declaration
+	var name string = "Coding Bootcamp"
+	var my_name, email string = "Tanjin", "tanjin@mail.com"
+
+	/*
+	Multi-line comments
+	*/
+
+	fmt.Println(name, email, my_name)
+
+	var c rune = 'A'
+	var age int = 10
+	var result float32 = 32.35
+
+	fmt.Println(c, age, result)
+}
+
+By the way, no semicolon in Golang which saves from lots of syntax errors. :D 
+
+Week-5, Lecture-9
+
+GoLang Data types- Boolean:
+
+package main
+
+import "fmt"
+
+func main(){
+
+	// var name string
+	// var age int
+	// var result float32
+	// var chr rune
+
+	var isFound bool
+
+	fmt.Println(true && true)
+	fmt.Println(true && false)
+	fmt.Println(true || true)
+	fmt.Println(true || false)
+	fmt.Println(!true)
+}
+
+If we run this code, we will see value of isFound is false.
+Because false is a default value for boolean.
+
+Variables declared without an explicit initial value are given their zero value.
+
+The zero value is:
+
+0 for numeric types,
+false for the boolean type, and
+"" (the empty string) for strings.
+
+package main
+
+import "fmt"
+
+func main() {
+	var i int
+	var f float64
+	var b bool
+	var s string
+	fmt.Printf("%v %v %v %q\n", i, f, b, s)
+}
+Output: 0 0 false ""
+
+If we run this code, we will see 0 for i, 0 for f, false for b, empty string for s
+
+Primitive data type:
+In computer science, a primitive is a fundamental data type that cannot be broken down
+into a more simple data type. For example, an integer is a primitive data type, while an array, which can store multiple data types, is not.
+
+rune: rune is an alias for int32 and is equivalent to int32 in all ways. It is used, by convention, to distinguish character values from integer values.
+
+ASCII, abbreviated from American Standard Code for Information Interchange, is a character encoding standard for electronic communication. ASCII codes represent text in computers, telecommunications equipment, and other devices. For example, 'A' is 65, 'B' is 66
+
+Verbs:
+%v	the value in a default format
+	when printing structs, the plus flag (%+v) adds field names
+%#v	a Go-syntax representation of the value
+%T	a Go-syntax representation of the type of the value
+%%	a literal percent sign; consumes no value
+%c	the character represented by the corresponding Unicode code point
+
+package main
+
+import "fmt"
+
+func main(){
+
+	var chr rune
+	chr = 'F'
+
+	fmt.Println(chr)
+	fmt.Printf("%c", chr)
+}
+
+This code will print 70 and F
+
+User input program:
+
+package main
+
+import "fmt"
+
+func main(){
+
+	fmt.Println("Enter your name and age: ")
+
+	var name string
+	var age int
+
+	fmt.Scanf("%s %d", &name, &age)
+
+	fmt.Printf("Your name is %s and age is %d", name, age)
+}
+
+Enter your name and age:
+abir 10
+Your name is abir and age is 10
+
+‘&’ operator: is termed as address operator and this used to return the address of a variable.
+
+Week-5, Lecture-10
+
+Composite data type:
+In computer science, a composite data type or compound data type is any data type which can be constructed in a program using the programming language's primitive data types and other composite types. It's also called custom data type.
+GoLang composite data types are array, slice, map, struct
+
+Array: An array data structure, or simply an array, is a data structure consisting of a collection of elements, each identified by at least one array index or key. An array is stored such that the position of each element can be computed from its index tuple by a mathematical formula.
+
+Here, a code of array implementation
+
+package main
+
+import "fmt"
+
+func main(){
+	// primitive data types
+	// rune, byte
+	// int, float32, string, bool
+
+	// composite data types
+	// array
+
+	// array representation of golang: var variableName [size] dataType
+	var students [3]string
+
+	// printing the array
+	fmt.Println(students)	// it will show [   ]
+	
+	// to show the length of array, use len() function
+	fmt.Println(len(students))
+
+	// slice
+
+	// map
+
+	// struct
+}
+
+Declaration Syntax: keyword arrayName [size] DataType (var age [3] int)
+Set value at an index arrayName[index] = value (age[0] = 10)
+
+Assigning values to the array:
+
+var students [3]string
+	// fixed length
+	// same type
+	// index count start from 0
+
+	// assigning string values to the array students
+	students[0] = "Tanjin"
+	students[1] = "Yousuf"
+	students[2] = "Mohammad"
+
+	// printing specific value
+	fmt.Println(students[0])
+
+Literals: In computer science, a literal is a notation for representing a fixed value in source code.
+
+	// array: short-hand way to assign
+	// string literals
+	products := [3] string{"iPhone", "Laptop", "Camera"}
+	fmt.Println(products)
+
+If we assign one more value, there will be an error (index out of bound)
+which means no space to assign another value to the array
+array index 3 out of bounds [0:3]
+
+If we use "..." instead of size, it will count comma separeted values
+
+books := [...] string{"inception", "crisis", "perception", "friends"}
+	fmt.Println(books)
+
+Slice: Slice is a dynamically-sized, flexible view into the elements of an array. A slice is formed by specifying two indices, a low and high bound, separated by a colon: indicator.
+
+var students [3] string
+// assigning string values to the array students
+	students[0] = "Tanjin"
+	students[1] = "Yousuf"
+	students[2] = "Mohammad"
+
+	// slicing from 0 to before 2
+	x := students[0:2]
+	fmt.Println(x)	
+
+Alternative way of slice implementation
+	x := make([] string, 0)
+	fmt.Println(x)
+
+Another epresentation of slice,
+
+var fruits [] string
+	fruits = append(fruits, "Apple", "Lemon")
+	fmt.Println(fruits)
+Output: [Apple Lemon] 2
+
+to see the type of variable
+	fmt.Printf("%T\n", fruits)
+	fmt.Printf("%T", students)
+
+Output will be:
+[]string
+[3]string
+
+Another way to see type is by using reflect
+
+import reflect
+a := reflect.TypeOf(students).Kind().String()
+	fmt.Println(a)
+
+b := reflect.TypeOf(fruits).Kind().String()
+fmt.Println(b)
+
+Output: 
+[3]stringarray
+slice
+
+Maps: A map is an unordered collection of key-value pairs. Also known as an associative array, a hash table or a dictionary, maps are used to look up a value by its associated key. 
+
+Here is a exmple:
+var x map[string]int
+
+var x map[string]int
+	fmt.Println(x)
+
+Output: map[]
+
+Assigning values to map
+
+var x map[string] string
+
+	x["name"] = "Tanjin"
+	x["age"] = "25"
+
+	fmt.Println(x)
+
+Output: panic: assignment to entry in nil map
+panic error: Up till now we have only seen compile-time errors. This is an example of a runtime error. As the name would imply, runtime errors happen when you run the program, while compile-time errors happen when you try to compile the program.
+
+x := make(map[string]string)
+
+	x["name"] = "Tanjin"
+	x["age"] = "25"
+
+	fmt.Println(x)
+
+Output: map[age:25 name:Tanjin]
+
+If we want to see only value, then run this code
+
+fmt.Println(x["name"])
+
+To delete an item type
+delete(x, "age")
+
+Week-6, Lecture-11
+
+Structure (struct): A struct is a collection of data fields with declared data types. Golang has the ability to declare and create own data types by combining one or more types, including both built-in and user-defined types. It's a composite or concrete type.
+
+package main
+
+import "fmt"
+
+// struct - a collection of fields and properties
+
+type Book struct{
+	Title string
+	Author string
+	ISBN string
+	Price float32
+	Pages int
+}
+
+func main(){
+
+	// Declaring this struct Book
+	var b1 Book
+
+	// assigning values
+	b1.Title = "An Introduction to Programming in Go"
+	b1.Author = "Coleb Dxsey"
+	b1.ISBN = "978-1478355823"
+	b1.Price = 10.5
+	b1.Pages = 140
+
+	// printing the values of struct Book
+	fmt.Println(b1)
+	fmt.Println(b1.Title)
+	fmt.Println(b1.Author)
+	fmt.Println(b1.ISBN)
+	fmt.Println(b1.Price)
+	fmt.Println(b1.Pages)
+}
+
+Output:
+{An Introduction to Programming in Go Coleb Dxsey 978-1478355823 10.5 140}
+An Introduction to Programming in Go
+Coleb Dxsey
+978-1478355823
+10.5
+140
+
+Literal: In computer science, a literal is a notation for representing a fixed value in source code
+
+Anonymous struct: An anonymous struct is just like a normal struct, but it’s defined without a name, and as such can’t be referenced elsewhere in code. For example:
+newCar := struct {
+	make    string
+	model   string
+	mileage int
+}{
+	make:    "Ford",
+	model:   "Taurus",
+	mileage: 200000,
+}
+
+Alternative way to represent a struct:
+
+package main
+
+import "fmt"
+
+func main(){
+
+	b1 := struct{
+			Title string
+			Author string
+			ISBN string
+			Price float32
+			Pages int
+		}{
+			Title: "An Introduction to Programming in Go",
+			Author: "Coleb Dxsey",
+			ISBN: "978-1478355823",
+			Price: 10.5,
+			Pages: 140,
+		}
+		fmt.Println(b1)
+}
+
+Output: {An Introduction to Programming in Go Coleb Dxsey 978-1478355823 10.5 140}
+
+Custom data type representation
+
+type Weight float32
+
+To run this multiple file type
+
+go run .  
+
+Scope: The Scope of a variable can be defined as a part of the program where a particular variable is accessible. There are two kinds of scopes. 1. Package level or global scope, 2. function level or local scope
+
+Local Variables(Declared Inside a block or a function)
+Global Variables(Declared outside a block or a function)
+
+import "fmt"
+
+// package level scope
+var w1 Weight
+
+func main(){
+	// function level scope
+	// var w1 Weight
+	w1 = 30.5
+
+	fmt.Println(w1, name)
+}
+
+Week-6, Lecture-12
+
+User input program:
+
+package main
+import "fmt"
+func main(){
+	fmt.Print("Enter your age: ")
+	var age int
+	fmt.Scanf("%d",&age)
+	fmt.Println(age)
+}
+
+Flow control (if, else, if-else, switch, while, for)
+
+Boolean Expression: A boolean expression is an expression that results in a boolean value, that is, in a value of either true or false . The println statement will be executed if wet and cold are both true, or if poor and hungry are both true. Boolean expressions are most often used as the above condition.
+
+if-else control flow:
+
+package main
+import "fmt"
+
+func main(){
+	fmt.Print("Enter your age: ")
+	var age int
+	fmt.Scanf("%d",&age)
+
+	//if boolean_expression{
+		//logic statement
+	//}
+
+	if age < 3 {	// 0 to 2
+		fmt.Println("Infant")
+	} else if age >= 3 && age < 13 {	// 3 to 12
+		fmt.Println("Child")
+	} else if age >= 13 && age <= 18 {	// 13 to 18
+		fmt.Println("Teenage")
+	} else {	// > 18
+		fmt.Println("Adult")
+	}
+}
+
+switch:
+
+switch age {
+	case 1,2:
+		fmt.Println("Infant")
+	case 3,4,5,6,7,8,9,10,11,12:
+		fmt.Println("Child")
+	case 13,14,15,16,17,18:
+		fmt.Println("Teenage")
+	default:
+		fmt.Println("Adult")
+	}
+
+If our condition has a ranged value, we should use if-else. otherwsie for fixed value, use switch case.
+
+fallthrough keyword: A fallthrough statement transfers control to the next case.
+For example:
+switch age {
+	case 1,2:
+		fmt.Println("Infant")
+		fallthrough		// the 2nd case will also be executed 
+	case 3,4,5,6,7,8,9,10,11,12:
+		fmt.Println("Child")
+	case 13,14,15,16,17,18:
+		fmt.Println("Teenage")
+	default:
+		fmt.Println("Adult")
+	}
+
+for loop: 
+
+// for loop
+	// for initialization;condition;increment
+	// i++ means i+1
+	for i:=0; i<=9; i++ {
+		fmt.Println(i)
+		// will print 0 to 9
+	}
+
+Another implementation of for loop:
+
+// for range
+	/*entry := []string{"Jack","John","Jones"}
+	for i, val := range entry {
+	  fmt.Printf("At position %d, the character %s is present\n", i, val)
+	}*/
+
+	students := []string{"Jack","John","Jones"}
+	for i, std := range students {
+		fmt.Println(i, std)
+	}
+
+Third implementation technique:
+
+// for boolean_expression (by default true)
+
+	for true {	// forever loop, unlimited 
+		fmt.Println("Hello!")
+	}
+
+// for boolean_expression
+	i := 0
+	for i<10 {
+		fmt.Println(i, "Hello!")
+		i++
+	}
+
+Week-7, Lecture-13
+
+Function: A function is a group of statements that exist within a program for the purpose of performing a specific task. At a high level, a function takes an input and returns an output.
+Function allows you to extract commonly used block of code into a single component.
+
+func NameOfFunc (parameters) outputDataType{
+	return output  //optional
+}
+
+A function to add two numbers implementation:
+
+package main
+import "fmt"
+
+// function named add to add two number
+func add(x int, y int) int{
+	//body
+	r := x+y
+	return r
+}
+
+func main(){
+	// calling the function
+	x:= add(10, 13)
+	fmt.Println(x)
+}
+
+Several ways to implement a function:
+
+package main
+import "fmt"
+
+// function named add to add two number
+// 1st way
+func add(x int, y int) int{
+	//body
+	r := x+y
+	return r
+}
+
+// 2nd way: for same type of parameters
+func add(x, y int) int{
+	//body
+	r := x+y
+	return r
+}
+
+// 3rd way define (r int)
+func add(x int, y int) (r int){
+	//body
+	r = x+y
+	return r
+}
+
+// 4th way
+func add(x int, y int) (r int){
+	//body
+	r = x+y
+	return
+}
+
+func main(){
+	// calling the function
+	x:= add(10, 13)
+	fmt.Println(x)
+}
+
+Another example of a function for returning multiple values:
+
+func rectangle(l int, b int) (area int, parameter int) {
+	parameter = 2 * (l + b)
+	area = l * b
+	return // Return statement without specify variable name
+}
+
+func main(){
+	// calling the function
+	// x:= add(10, 13)
+	a, p := rectangle(10, 10)
+	fmt.Println(a, p)
+}
+
+Function names are case sensitive. For example: car, Car and CAR are three different variables.
+
+Passing Address to a Function:
+Passing the address of variable to the function and the value of a variables modified using dereferencing inside body of function.
+
+Pointer: Pointers in Go programming language or Golang is a variable which is used to store the memory address of another variable. Pointers in Golang is also termed as the special variables. The variables are used to store some data at a particular memory address in the system.
+
+The * symbol is used to declare a pointer and to dereference. The & symbol points to the address of the stored value.
+Example code:
+
+func update(a *int, t *string) {
+	*a = *a + 5      // defrencing pointer address
+	*t = *t + " Doe" // defrencing pointer address
+	return
+}
+
+func main(){
+	// calling the function
+	// x:= add(10, 13)
+	// a, p := rectangle(10, 10)
+	// fmt.Println(a, p)
+	a := 10
+	t := "root"
+	update(&a, &t)
+	fmt.Println(a, t)
+}
+
+Anonymous Functions
+An anonymous function is a function that was declared without any named identifier to refer to it. Anonymous functions can accept inputs and return outputs, just as standard functions do.
+Example:
+
+func main(){
+	// anonymous function
+	a := func(x, y int)(r int){
+		r = x*y
+		return
+	}
+	fmt.Println(a(10,10))
+}
+
+alternative implementation:
+
+a := func(x, y int)(r int){
+		r = x*y
+		return
+	}(10,10)
+
+	fmt.Println(a)
+
+Week-7, Lecture-14
+
+Pointer: a pointer is an object that stores a memory address. A pointer references a location in memory, and obtaining the value stored at that location is known as dereferencing the pointer. in other words, A pointer is a variable that stores the address of another variable. Unlike other variables that hold values of a certain type, pointer holds the address of a variable. For example, an integer variable holds (or you can say stores) an integer value, however an integer pointer holds the address of a integer variable.
+
+Memory address: a memory address is a reference to a specific memory location used at various levels by software and hardware. Memory addresses are fixed-length sequences of digits conventionally displayed and manipulated as unsigned integers.
+
+In regular variable, a data is stored as a value. But in pointer variable, a hexadecimal type value is stored.
+Example:
+
+package main
+import "fmt"
+
+func main(){
+	var x int
+	var y *int
+	fmt.Println("x value is: ", x)
+	fmt.Println("x memory address is: ", &x)
+	fmt.Println("x value is: ", y)
+	fmt.Println("x memory address is: ", &y)
+}
+
+Output:
+x value is:  0
+x memory address is:  0xc000012090
+x value is:  <nil>
+x memory address is:  0xc000006028
+
+Here, 0x00012... is memory address
+
+If we run this program:
+
+func main(){
+	x = 10
+	y = &x
+	fmt.Println("x is: ", x)
+	fmt.Println("y is: ", y)
+}
+
+Output: 
+x is:  10
+y is:  0xc000012090
+
+Here, y will store x's memory location as it's value
+
+To view dereferencing value of y, run this program
+
+func main(){
+	x = 10 // assignment
+	y = &x // referencing
+	fmt.Println("x is: ", x) // accessing
+	fmt.Println("y is: ", y)
+
+	// dereferencing 
+	fmt.Println("y dereferencing value is: ", *y)
+}
+
+Output:
+y dereferencing value is:  10
+
+Here, y is dereferencing 
+
+Now, we have created a new function
+
+package main
+import "fmt"
+
+func update(a *int){
+	fmt.Println(a)
+	*a = *a + 10
+}
+
+func main(){
+
+	var x int 
+	var y *int 
+
+	fmt.Println("x value is: ", x)
+	fmt.Println("x memory address is: ", &x)
+
+	fmt.Println("x value is: ", y)
+	fmt.Println("x memory address is: ", &y)
+
+	x = 10 // assignment
+	y = &x // referencing
+	
+	fmt.Println("x is: ", x) // accessing
+	fmt.Println("y is: ", y)
+
+	fmt.Println("y dereferencing value is: ", *y) // dereferencing
+
+	update(&x)
+	fmt.Println(x)
+}
+
+Output: 
+x value is:  0
+x memory address is:  0xc000012090
+x value is:  <nil>
+x memory address is:  0xc000006028
+x is:  10
+y is:  0xc000012090
+y dereferencing value is:  10
+0xc000012090
+20
+
+Here, 0xc000012090 is a or which is memory address of x
+20 is the value of a
+
+Week-8, Lecture-15
+
+Network: a group or system of interconnected people or things.
+
+Computer Network: A computer network is a group of computers that use a set of common communication protocols over digital interconnections for the purpose of sharing.
+
+Local area network: A local area network is a computer network that interconnects computers within a limited area such as a residence, school, laboratory, university campus or office building.
+
+Wide area network: a wide area network not only covers a larger geographic distance, but also generally involves leased telecommunication circuits
+
+ISP: internet service provider. An Internet service provider is an organization that provides a myriad of services for accessing, using, or participating in the Internet. Internet service providers can be organized in various forms, such as commercial, community-owned, non-profit, or otherwise privately owned
+
+Protocol: A communication protocol is a system of rules that allow two or more entities of a communications system to transmit information via any kind of variation of a physical quantity. The protocol defines the rules, syntax, semantics and synchronization of communication and possible error recovery method
+
+Email sending flow: Compose -> Translation -> Encryption -> Receive
+
+OSI model: The Open Systems Interconnection model is a conceptual model that characterises and standardises the communication functions of a telecommunication or computing system without regard to its underlying internal structure and technology
+
+Layers: 1. Application, 2. Presentation, 3. Session, 4. Transport, 5. Network, 6. Datalink, 
+7. Physical Layer: Media converter, MAC/ NIC
+
+Port: In computer networking, a port is a communication endpoint. At the software level, within an operating system, a port is a logical construct that identifies a specific.
+
+23 = Telnet - Remote login service, unencrypted text messages
+
+25 = Simple Mail Transfer Protocol (SMTP) E-mail Routing
+
+53 = Domain Name System (DNS) service
+
+80 = Hypertext Transfer Protocol (HTTP) used in World Wide Web
+
+HTTP: The Hypertext Transfer Protocol is an application layer protocol for distributed, collaborative, hypermedia information systems.
+
+traceroute or tracert: In computing, traceroute and tracert are computer network diagnostic commands for displaying possible routes and measuring transit delays of packets across an Internet Protocol network.
+
+Week-8, Lecture-16
+
+Hypertext Transfer Protocol (HTTP): The Hypertext Transfer Protocol is an application layer protocol for distributed, collaborative, hypermedia information systems. Development of HTTP was initiated by Tim Berners-Lee at CERN in 1989. Standards development of HTTP was coordinated by the Internet Engineering Task Force (IETF) and the World Wide Web Consortium (W3C), culminating in the publication of a series of Requests for Comments (RFCs).
+
+Request For Comment (RFC): A Request for Comments (RFC) is a type of publication from the Internet Engineering Task Force (IETF) and the Internet Society (ISOC), the principal technical development and standards-setting bodies for the Internet.
+
+A sample program:
+
+package main
+
+import (
+	"fmt"
+	"net"
+	"os"
+)
+
+func main() {
+
+	nl, err := net.Listen("tcp", ":8888") //1 to 65535
+	if err != nil {
+		fmt.Println(err.Error())
+		os.Exit(1) //1= stop with error
+	}
+
+	conn, err := nl.Accept()
+	if err != nil {
+		fmt.Println(err.Error())
+		//continue
+	}
+
+	bs := make([]byte, 1024) //text asass asas //1500 bytes
+
+	n, e := conn.Read(bs)
+	if e != nil {
+		fmt.Println(e.Error())
+	}
+
+	fmt.Println(n)
+	//fmt.Println(bs)
+	reqstr := string(bs) //convertion
+	fmt.Println(reqstr)
+	//reqSlc := strings.Fields(reqstr)
+	//fmt.Println(reqSlc, len(reqSlc))
+
+	body := `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body><strong>Welcome to coding boot camp</strong></body></html>`
+
+	// fmt.Fprint(conn, "HTTP/1.1 200 OK\r\n")
+	// fmt.Fprintf(conn, "Content-Length: %d\r\n", len(body))
+	// fmt.Fprint(conn, "Content-Type: text/html\r\n")
+	// fmt.Fprint(conn, "\r\n")
+	// fmt.Fprint(conn, body)
+
+	resp := "HTTP/1.1 200 OK\r\n" +
+		"Content-Length: %d\r\n" +
+		"Content-Type: text/html\r\n" +
+		"\r\n%s"
+
+	msg := fmt.Sprintf(resp, len(body), body)
+	fmt.Println(msg)
+	conn.Write([]byte(msg))
+
+	//conn.Close()
+	//https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages
+}
+
+Here, the output will show 
+Welcome to coding boot camp
+in the browser
+
+In the command prompt, this will be shown
+
+572
+GET / HTTP/1.1
+Host: localhost:8888
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,bn;q=0.8
+
+                                                                                                                                                                                                                                                                                                                                                                        
+HTTP/1.1 200 OK
+Content-Length: 145
+Content-Type: text/html
