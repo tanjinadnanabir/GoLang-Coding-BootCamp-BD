@@ -8,11 +8,13 @@ import (
 // type Handler interface {
 // 	ServeHTTP(ResponseWriter, *Request)
 // }
+
 func main() {
 
 	//var name Datatype
 	//var x string
 	//var handler func(ResponseWriter, *Request)
+	
 	http.HandleFunc("/", home)
 	http.HandleFunc("/about", about)
 	http.HandleFunc("/contact", contact)
