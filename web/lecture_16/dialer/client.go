@@ -26,5 +26,4 @@ func main() {
 	fmt.Println(string(bs[:n]))
 
 	conn.Close()
-
 }

@@ -8,19 +8,19 @@ import (
 
 func main() {
 
-	nl, err := net.Listen("tcp", ":8888") //1 to 65535
+	nl, err := net.Listen("tcp", ":8888") // 1 to 65535
 	if err != nil {
 		fmt.Println(err.Error())
-		os.Exit(1) //1= stop with error
+		os.Exit(1) // 1 = stop with error
 	}
 
 	conn, err := nl.Accept()
 	if err != nil {
 		fmt.Println(err.Error())
-		//continue
+		// continue
 	}
 
-	bs := make([]byte, 1024) //text asass asas //1500 bytes
+	bs := make([]byte, 1024)
 
 	n, e := conn.Read(bs)
 	if e != nil {
@@ -29,10 +29,12 @@ func main() {
 
 	fmt.Println(n)
 	//fmt.Println(bs)
+
 	reqstr := string(bs) //convertion
 	fmt.Println(reqstr)
-	//reqSlc := strings.Fields(reqstr)
-	//fmt.Println(reqSlc, len(reqSlc))
+
+	// reqSlc := strings.Fields(reqstr)
+	// fmt.Println(reqSlc, len(reqSlc))
 
 	body := `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body><strong>Welcome to coding boot camp</strong></body></html>`
 
@@ -51,6 +53,5 @@ func main() {
 	fmt.Println(msg)
 	conn.Write([]byte(msg))
 
-	//conn.Close()
-	//https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages
+	// conn.Close()
 }
