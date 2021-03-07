@@ -11,9 +11,9 @@ import (
 
 func main() {
 
-	//var name Datatype
-	//var x string
-	//var handler func(ResponseWriter, *Request)
+	// var name Datatype
+	// var x string
+	// var handler func(ResponseWriter, *Request)
 
 	http.HandleFunc("/", home)
 	http.HandleFunc("/about", about)
