@@ -10,7 +10,7 @@ func main() {
 	// http.Handle("/", http.FileServer(http.Dir("assets")))
 	http.Handle("/res/", http.StripPrefix("/res/", http.FileServer(http.Dir("assets"))))
 
-	//http.HandleFunc("/img", img)
+	// http.HandleFunc("/img", img)
 	http.ListenAndServe(":8080", nil)
 }
 
