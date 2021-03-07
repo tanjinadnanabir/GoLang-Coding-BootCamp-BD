@@ -20,7 +20,7 @@ func main() {
 		// continue
 	}
 
-	bs := make([]byte, 1024)
+	bs := make([]byte, 1024) // text // 1024 // 1500 byte
 
 	n, e := conn.Read(bs)
 	if e != nil {
@@ -30,13 +30,13 @@ func main() {
 	fmt.Println(n)
 	//fmt.Println(bs)
 
-	reqstr := string(bs) //convertion
+	reqstr := string(bs) // conversion
 	fmt.Println(reqstr)
 
 	// reqSlc := strings.Fields(reqstr)
 	// fmt.Println(reqSlc, len(reqSlc))
 
-	body := `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body><strong>Welcome to coding boot camp</strong></body></html>`
+	body := `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body><strong>Welcome to Coding BootCamp</strong></body></html>`
 
 	// fmt.Fprint(conn, "HTTP/1.1 200 OK\r\n")
 	// fmt.Fprintf(conn, "Content-Length: %d\r\n", len(body))
