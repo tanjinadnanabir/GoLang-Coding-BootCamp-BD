@@ -41,6 +41,7 @@ func main() {
 
 		// fmt.Println(n)
 		// fmt.Println(bs)
+		
 		reqstr := string(bs[:n])
 		fmt.Println(reqstr)
 		recvTime := time.Now().Format("2006-01-02 15:04:05")
