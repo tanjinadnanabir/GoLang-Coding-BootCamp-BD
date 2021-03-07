@@ -16,8 +16,7 @@ func main() {
 
 	//way-1
 	// bs := []byte("Hello")
-	// conn.Write(bs)
-
+	// conn.Write(bs)p
 	//way-2
 	conn.Write([]byte("Hello"))
 
