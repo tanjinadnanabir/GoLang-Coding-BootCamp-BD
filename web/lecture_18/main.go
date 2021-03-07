@@ -21,9 +21,8 @@ func home(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-
 	ptmp.Execute(w, nil)
-	//fmt.Fprintf(w, `welcome`)
+	// fmt.Fprintf(w, `welcome`)
 }
 
 func features(w http.ResponseWriter, r *http.Request) {
@@ -38,7 +37,6 @@ func features(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err.Error())
 	}
 	ptmp.Execute(w, nil)
-	//fmt.Fprintf(w, `welcome`)
 }
 
 func docs(w http.ResponseWriter, r *http.Request) {
@@ -52,7 +50,5 @@ func docs(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-
 	ptmp.Execute(w, nil)
-	//fmt.Fprintf(w, `welcome`)
 }
