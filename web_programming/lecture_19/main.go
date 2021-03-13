@@ -101,7 +101,7 @@ func request(w http.ResponseWriter, r *http.Request) {
 	// 	fmt.Println(key, val)
 	// }
 
-	qs := "INSERT INTO `request` (`id`, `name`, `company`, `email`, `status`) VALUES (NULL, '%s', '%s', '%s', '1');"
+	qs := "INSERT INTO `requests` (`id`, `name`, `company`, `email`, `status`) VALUES (NULL, '%s', '%s', '%s', '1');"
 	sql := fmt.Sprintf(qs, name, company, email)
 
 	//fmt.Println(sql)
