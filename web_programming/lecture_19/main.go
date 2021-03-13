@@ -17,17 +17,20 @@ func init() {
 	// Open up our database connection.
 	// I've set up a database on my local machine using phpmyadmin.
 	// The database is called testDb
-	db, err = sql.Open("mysql", "root:test123@tcp(127.0.0.1:3306)/hosting_db")
+
+	db, err = sql.Open("mysql", "root:r00tc0de@tcp(127.0.0.1:3306)/loruki_db")
 
 	// if there is an error opening the connection, handle it
+
 	if err != nil {
 		panic(err.Error())
 	}
 
 	// defer the close till after the main function has finished
 	// executing
-	//defer db.Close()
-	fmt.Println("db connection successful")
+	// defer db.Close()
+
+	fmt.Println("database connection successful!")
 }
 
 func main() {
@@ -48,7 +51,6 @@ func home(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ptmp.Execute(w, nil)
-	//fmt.Fprintf(w, `welcome`)
 }
 
 func features(w http.ResponseWriter, r *http.Request) {
@@ -63,7 +65,6 @@ func features(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err.Error())
 	}
 	ptmp.Execute(w, nil)
-	//fmt.Fprintf(w, `welcome`)
 }
 
 func docs(w http.ResponseWriter, r *http.Request) {
@@ -79,20 +80,22 @@ func docs(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ptmp.Execute(w, nil)
-	//fmt.Fprintf(w, `welcome`)
 }
 
 func request(w http.ResponseWriter, r *http.Request) {
 
-	//method-1
+	// method-1
+
 	name := r.FormValue("name")
 	company := r.FormValue("company")
 	email := r.FormValue("email")
 
 	// fmt.Println(name, company, email)
+
 	// fmt.Fprintf(w, `received %s %s %s`, name, company, email) //response
 
-	//method-2
+	// method-2
+
 	// r.ParseForm()
 	// for key, val := range r.Form {
 	// 	fmt.Println(key, val)
@@ -100,11 +103,15 @@ func request(w http.ResponseWriter, r *http.Request) {
 
 	qs := "INSERT INTO `request` (`id`, `name`, `company`, `email`, `status`) VALUES (NULL, '%s', '%s', '%s', '1');"
 	sql := fmt.Sprintf(qs, name, company, email)
+
 	//fmt.Println(sql)
+
 	insert, err := db.Query(sql)
+
 	if err != nil {
 		panic(err.Error())
 	}
+
 	defer insert.Close()
 
 	fmt.Fprintf(w, `OK`)
