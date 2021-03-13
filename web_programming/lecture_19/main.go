@@ -40,6 +40,7 @@ func main() {
 	http.HandleFunc("/request", request)
 	http.HandleFunc("/features", features)
 	http.HandleFunc("/docs", docs)
+	// file server
 	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir("assets"))))
 	http.ListenAndServe(":8888", nil)
 }
