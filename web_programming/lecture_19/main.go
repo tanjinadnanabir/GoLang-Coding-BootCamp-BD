@@ -9,7 +9,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-var db *sql.DB
+var db *sql.DB // should be globally declared
 var err error
 
 func init() {
@@ -31,6 +31,12 @@ func init() {
 
 	// defer db.Close()
 
+	// insert, err := db.Query("INSERT INTO `requests` (`id`, `name`, `company`, `email`, `status`) VALUES (NULL, '%s', '%s', '%s', '1');")
+	// if err != nil {
+	// 	panic(err.Error())
+	// }
+	// defer insert.Close()
+
 	fmt.Println("database connection successful!")
 }
 
@@ -40,7 +46,9 @@ func main() {
 	http.HandleFunc("/request", request)
 	http.HandleFunc("/features", features)
 	http.HandleFunc("/docs", docs)
+
 	// file server
+
 	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir("assets"))))
 	http.ListenAndServe(":8888", nil)
 }
@@ -94,9 +102,10 @@ func request(w http.ResponseWriter, r *http.Request) {
 
 	// fmt.Println(name, company, email)
 
-	// fmt.Fprintf(w, `received %s %s %s`, name, company, email) //response
+	// fmt.Fprintf(w, `received`) // response, values are shown at server
+	// fmt.Fprintf(w, `received %s %s %s`, name, company, email)
 
-	// method-2
+	// method-2- advanced handling, dynamic
 
 	// r.ParseForm()
 	// for key, val := range r.Form {
