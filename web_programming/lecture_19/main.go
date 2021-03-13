@@ -47,11 +47,12 @@ func main() {
 
 func home(w http.ResponseWriter, r *http.Request) {
 
+	// ptmp = pointer to template
+
 	ptmp, err := template.ParseFiles("template/base.gohtml")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-
 	ptmp.Execute(w, nil)
 }
 
@@ -80,7 +81,6 @@ func docs(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-
 	ptmp.Execute(w, nil)
 }
 
