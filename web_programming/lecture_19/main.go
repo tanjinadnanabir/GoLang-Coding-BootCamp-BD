@@ -28,6 +28,7 @@ func init() {
 
 	// defer the close till after the main function has finished
 	// executing
+
 	// defer db.Close()
 
 	fmt.Println("database connection successful!")
@@ -114,5 +115,5 @@ func request(w http.ResponseWriter, r *http.Request) {
 
 	defer insert.Close()
 
-	fmt.Fprintf(w, `OK`)
+	fmt.Fprintf(w, `Welcome %s!`, name)
 }
