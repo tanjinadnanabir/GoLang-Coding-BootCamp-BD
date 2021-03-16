@@ -164,7 +164,7 @@ func request(w http.ResponseWriter, r *http.Request) {
 	var reqTable RequestTable
 
 	r.Form.Add("bucket", "rootcode")
-	r.Form.Add("aid", "requests::2") // we will update later
+	r.Form.Add("aid", "requests::3") // we will update later
 	r.Form.Add("type", "requests")
 	r.Form.Add("status", "1")
 
