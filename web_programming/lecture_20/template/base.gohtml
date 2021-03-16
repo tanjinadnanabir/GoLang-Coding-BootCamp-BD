@@ -188,9 +188,9 @@
         //alert("loaded succesfully");
 
         $('#reqForm').submit(function(){
-        
-            //alert('submit btn pressed');
 
+            //alert('submit btn pressed');
+            
                 $.ajax({
                 async: true,
                 type: "POST",
@@ -199,18 +199,13 @@
                 error: function(err, stsco){
                         alert(e,stsco);
                 }
-                
                 }).done(function(rdata){
-
                     //alert(rdata);
                     location.reload();
-
                 });
             return false;
         });
     });
-
   </script>
-
 </body>
 </html>
