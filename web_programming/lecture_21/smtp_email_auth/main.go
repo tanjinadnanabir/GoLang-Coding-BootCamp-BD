@@ -19,9 +19,8 @@ func base64Encode(strtxt string) (encodedStr string) {
 
 func gmailPlainTextAuthCode() {
 
-	//for generating gmail plain text authentication
-	resp := []byte("\x00" + "yourgmailuser@gmail.com" + "\x00" + "gmailPassword")
+	// for generating gmail plain text authentication
+	resp := []byte("\x00" + "rootmohsadnan@gmail.com" + "\x00" + "r00tmohsadnan")
 	sEnc := base64.StdEncoding.EncodeToString([]byte(resp))
 	fmt.Println(sEnc)
-
 }
