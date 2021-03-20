@@ -3,3 +3,7 @@
 3. Chat Server
 4. MySQL
 5. Couchbase
+
+6. Email:
+
+openssl s_client -connect smtp.gmail.com:587 -quiet -starttls smtp
