@@ -6,21 +6,22 @@ import (
 )
 
 func main() {
-	send("rootcode360@gmail.com", "Bismillah testing from golang")
+	send("xyz@gmail.com", "Testing from golang...")
 }
 
-//before sending email
-//make sure your  2step security is turned on/enabled
-//and app password is generated
+// before sending email
+// make sure your  2step security is turned on/enabled
+// and app password is generated
+
 func send(to, body string) bool {
 
-	from := "xyz@gmail.com"   //yourusername@gmail.com
-	pass := "yourAppPassword" //app specific password yourAppPassword
-	//to := "xyz@gmail.com" //receiver
+	from := "xyz@gmail.com" // username@gmail.com
+	pass := "pass"          // app specific password
+	//to := "xyz@gmail.com" // receiver
 
 	msg := "From: " + from + "\n" +
 		"To: " + to + "\n" +
-		"Subject: Hello mostain\n\n" +
+		"Subject: Hello rootcode\n\n" +
 		body
 
 	err := smtp.SendMail("smtp.gmail.com:587",
@@ -31,6 +32,6 @@ func send(to, body string) bool {
 		fmt.Println("SMTP error", err.Error())
 		return false
 	}
-	fmt.Println("email successfully sent")
+	fmt.Println("email successfully sent...")
 	return true
 }

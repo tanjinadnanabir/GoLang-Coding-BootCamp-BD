@@ -12,7 +12,7 @@ func main() {
 
 func base64Encode(strtxt string) (encodedStr string) {
 
-	//bnJqZ3pwcmlkcG14d3lreQ==
+	// bnJqZ3pwcmlkcG14d3lreQ==
 	encodedStr = base64.StdEncoding.EncodeToString([]byte(strtxt))
 	return
 }
