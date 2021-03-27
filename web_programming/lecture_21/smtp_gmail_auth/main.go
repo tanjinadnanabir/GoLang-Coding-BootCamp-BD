@@ -14,9 +14,9 @@ func main() {
 //and app password is generated
 func send(to, body string) bool {
 
-	from := "tanjinadnanabir2020@gmail.com" //yourusername@gmail.com
-	pass := "yourAppPassword"        //app specific password yourAppPassword
-	//to := "bill.rassel@gmail.com" //receiver
+	from := "xyz@gmail.com"   //yourusername@gmail.com
+	pass := "yourAppPassword" //app specific password yourAppPassword
+	//to := "xyz@gmail.com" //receiver
 
 	msg := "From: " + from + "\n" +
 		"To: " + to + "\n" +
