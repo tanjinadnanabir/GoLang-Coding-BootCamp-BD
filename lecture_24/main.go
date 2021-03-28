@@ -1,11 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"os"
-	"path/filepath"
-)
-
 func main() {
 
 	// dir, err := os.Getwd()
@@ -48,7 +42,7 @@ func main() {
 	// fullPath := filepath.Join("master")
 	// fmt.Println(base)
 	// fmt.Println(fullPath)
-	
+
 	// fullpath = E:\go\src\CodingBootCampGoLang\lecture_24
 
 	// relativePath := filepath.Join("master")
@@ -64,25 +58,26 @@ func main() {
 
 	// os.Mkdir(`D:\TEST`, 777)
 	// os.Rename(`D:\TEST`, `D:\TEST_01`)
-	
-	// *** End *** //
 
+	// *** End *** //
 
 	// f := excelize.NewFile()
 
-	// Create a new sheet.
+	// Create a new sheet
 
-	// index := f.NewSheet("Sheet2")
+	// index := f.NewSheet("Sheet_2")
 
-	// Set value of a cell.
+	// Set value of a cell
 
-	// f.SetCellValue("Sheet2", "A2", "Hello world.")
-	// f.SetCellValue("Sheet1", "B2", 100)
+	// f.SetCellValue("Sheet_2", "A2", "Hello world")
+	// f.SetCellValue("Sheet_1", "B2", 100)
 
-	// Set active sheet of the workbook.
+	// Set active sheet of the workbook
+
 	// f.SetActiveSheet(index)
 
-	// Save spreadsheet by the given path.
+	// Save spreadsheet by the given path
+
 	// if err := f.SaveAs("test.xlsx"); err != nil {
 	// 	fmt.Println(err)
 	// }
@@ -93,18 +88,20 @@ func main() {
 	// 	return
 	// }
 
-	// Get value from cell by given worksheet name and axis.
+	// Get value from cell by given worksheet name and axis
 
 	// cell, err := f.GetCellValue("Sheet2", "A2")
+
 	// if err != nil {
 	// 	fmt.Println(err)
 	// 	return
 	// }
-
 	// fmt.Println(cell)
 
-	// Get all the rows in the Sheet1.
+	// Get all the rows in the Sheet1
+
 	// rows, err := f.GetRows("Sheet1")
+
 	// for _, row := range rows {
 	// 	for _, colCell := range row {
 	// 		fmt.Print(colCell, "\t")
@@ -113,22 +110,22 @@ func main() {
 	// }
 }
 
-func createFile(fileName, content string) bool {
+// func createFile(fileName, content string) bool {
 
-	posf, err := os.Create(fileName)
+// 	posf, err := os.Create(fileName)
 
-	if err != nil {
-		fmt.Println(err.Error())
-		return false
-	}
+// 	if err != nil {
+// 		fmt.Println(err.Error())
+// 		return false
+// 	}
 
-	defer posf.Close()
+// 	defer posf.Close()
 
-	_, err = posf.Write([]byte(content))
+// 	_, err = posf.Write([]byte(content))
 
-	// fmt.Println(n, err)
-	if err != nil {
-		return false
-	}
-	return true
-}
+// 	// fmt.Println(n, err)
+// 	if err != nil {
+// 		return false
+// 	}
+// 	return true
+// }
