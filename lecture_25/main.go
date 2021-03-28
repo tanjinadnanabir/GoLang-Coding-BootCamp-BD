@@ -16,7 +16,7 @@ func main() {
 	go cooking("rice", &wg)
 	go cooking("curry", &wg)
 
-	//time.Sleep(time.Second * 20)
+	// time.Sleep(time.Second * 20)
 	wg.Wait()
 }
 
@@ -25,6 +25,5 @@ func cooking(msg string, wg *sync.WaitGroup) {
 		fmt.Println(msg, i)
 		time.Sleep(time.Second * 1)
 	}
-
 	wg.Done()
 }
