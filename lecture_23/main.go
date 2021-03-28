@@ -12,7 +12,7 @@ func main() {
 	// fmt.Println(result)
 
 	// strSlc := []interface{}{10, 20, "60"}
-	// //result2 := Sum2(strSlc...)
+	// result2 := Sum2(strSlc...)
 	// result2 := Sum2(10, 20, "60")
 	// fmt.Println(result2)
 

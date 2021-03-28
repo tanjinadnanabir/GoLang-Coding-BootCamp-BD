@@ -18,7 +18,6 @@ func main() {
 
 	//time.Sleep(time.Second * 20)
 	wg.Wait()
-
 }
 
 func cooking(msg string, wg *sync.WaitGroup) {
