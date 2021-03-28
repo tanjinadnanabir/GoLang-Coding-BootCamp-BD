@@ -39,6 +39,7 @@ func main() {
 	// absolutePath, _ := filepath.Abs("master_academy")
 
 	// E:\GOLANG\src\master_academy\lecture_24\master_academy
+	
 	// newPath := filepath.Join(absolutePath, "..", "..", "lecture_25")
 	// fmt.Println(base)
 	// fmt.Println(relativePath)
