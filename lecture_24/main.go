@@ -3,21 +3,27 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 )
 
 func main() {
 
-	dir, err := os.Getwd()
-	if err != nil {
-		fmt.Println(err.Error())
-	}
+	// dir, err := os.Getwd()
 
-	fmt.Println(dir)
+	// if err != nil {
+	// 	fmt.Println(err.Error())
+	// }
 
-	// isErr := createFile("master_academy2.txt", "hello bangladesh")
+	// fmt.Println(dir)
+
+	// createFile("master.txt", "Hello GoLang!")
+
+	// isErr := createFile("master_1.txt", "Hello Bangladesh!")
+
 	// fmt.Println(isErr)
 
-	// fi, err := os.Stat("master_academy2.txt")
+	// fi, err := os.Stat("master_1.txt")
+
 	// if err != nil {
 	// 	fmt.Println(err.Error())
 	// }
@@ -29,26 +35,38 @@ func main() {
 
 	// how to make a folder
 
-	// err := os.Mkdir("master_academy", 0777)
+	// err := os.Mkdir("master", 0777)
+
 	// if err != nil {
 	// 	fmt.Println(err.Error())
 	// }
 
-	// base := filepath.Base(dir)
-	// relativePath := filepath.Join("master_academy")
-	// absolutePath, _ := filepath.Abs("master_academy")
+	// base := filepath.Base("./master")
+	// fmt.Println(base)
 
-	// E:\GOLANG\src\master_academy\lecture_24\master_academy
+	// base := filepath.Base(dir)
+	// fullPath := filepath.Join("master")
+	// fmt.Println(base)
+	// fmt.Println(fullPath)
 	
+	// fullpath = E:\go\src\CodingBootCampGoLang\lecture_24
+
+	// relativePath := filepath.Join("master")
+	// absolutePath, _ := filepath.Abs("master")
 	// newPath := filepath.Join(absolutePath, "..", "..", "lecture_25")
+
 	// fmt.Println(base)
 	// fmt.Println(relativePath)
 	// fmt.Println(absolutePath)
 	// fmt.Println(newPath)
+
 	// os.Mkdir(newPath, 777)
 
-	//os.Mkdir(`D:\TEST`, 777)
-	//os.Rename(`D:\TEST`, `D:\TEST_01`)
+	// os.Mkdir(`D:\TEST`, 777)
+	// os.Rename(`D:\TEST`, `D:\TEST_01`)
+	
+	// *** End *** //
+
 
 	// f := excelize.NewFile()
 
@@ -105,9 +123,10 @@ func createFile(fileName, content string) bool {
 	}
 
 	defer posf.Close()
+
 	_, err = posf.Write([]byte(content))
 
-	fmt.Println(n, err)
+	// fmt.Println(n, err)
 	if err != nil {
 		return false
 	}
