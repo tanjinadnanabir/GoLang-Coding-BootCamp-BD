@@ -3,18 +3,16 @@ package main
 import (
 	"fmt"
 	"os"
-
-	"github.com/360EntSecGroup-Skylar/excelize"
 )
 
 func main() {
 
-	// dir, err := os.Getwd()
-	// if err != nil {
-	// 	fmt.Println(err.Error())
-	// }
+	dir, err := os.Getwd()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
 
-	// fmt.Println(dir)
+	fmt.Println(dir)
 
 	// isErr := createFile("master_academy2.txt", "hello bangladesh")
 	// fmt.Println(isErr)
@@ -63,19 +61,19 @@ func main() {
 	// 	fmt.Println(err)
 	// }
 
-	f, err := excelize.OpenFile("test.xlsx")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+	// f, err := excelize.OpenFile("test.xlsx")
+	// if err != nil {
+	// 	fmt.Println(err)
+	// 	return
+	// }
 
-	// Get value from cell by given worksheet name and axis.
-	cell, err := f.GetCellValue("Sheet2", "A2")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	fmt.Println(cell)
+	// // Get value from cell by given worksheet name and axis.
+	// cell, err := f.GetCellValue("Sheet2", "A2")
+	// if err != nil {
+	// 	fmt.Println(err)
+	// 	return
+	// }
+	// fmt.Println(cell)
 
 	// // Get all the rows in the Sheet1.
 	// rows, err := f.GetRows("Sheet1")
@@ -85,22 +83,21 @@ func main() {
 	// 	}
 	// 	fmt.Println()
 	// }
-
 }
 
-func createFile(fileName, content string) bool {
+// func createFile(fileName, content string) bool {
 
-	posf, err := os.Create(fileName)
-	if err != nil {
-		fmt.Println(err.Error())
-		return false
-	}
+// 	posf, err := os.Create(fileName)
+// 	if err != nil {
+// 		fmt.Println(err.Error())
+// 		return false
+// 	}
 
-	defer posf.Close()
-	_, err = posf.Write([]byte(content))
-	//fmt.Println(n, err)
-	if err != nil {
-		return false
-	}
-	return true
-}
+// 	defer posf.Close()
+// 	_, err = posf.Write([]byte(content))
+// 	//fmt.Println(n, err)
+// 	if err != nil {
+// 		return false
+// 	}
+// 	return true
+// }
