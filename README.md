@@ -1,2 +1,2 @@
 # CodingBootCampGoLang
-GoLang Programming Bootcamp by Master Academy
+GoLang Programming BootCamp organized by BD Copyright Office and Master Academy
